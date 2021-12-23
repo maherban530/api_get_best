@@ -18,6 +18,7 @@ class API_Manager {
 
         newsModel = NewsModel.fromJson(jsonMap);
       }
+    // ignore: non_constant_identifier_names
     } catch (Exception) {
       return newsModel;
     }

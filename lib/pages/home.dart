@@ -1,7 +1,7 @@
 import 'package:bloc_pattern_best_code/model/news_model.dart';
 import 'package:bloc_pattern_best_code/services/api_management.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+// import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Future<NewsModel> _newsModel;
-
+  
   @override
   void initState() {
     _newsModel = API_Manager().getNews();
@@ -19,9 +19,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    if (_newsModel == null) {
-      return CircularProgressIndicator();
-    }
+    // if (_newsModel == null) {
+    //   return CircularProgressIndicator();
+    // }
     return Scaffold(
       appBar: AppBar(
         title: Text('News App'),
